@@ -1,0 +1,17 @@
+.editor-block-types-list [class*="mega-blocks-gutenberg"] {
+	background-color: #CCE5FF;
+}
+.editor-block-types-list [class*="mega-blocks-gutenberg"] span {
+	background-color: #cce5ff;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+.mbg-wrapper .card {
+	margin: 0 !important;
+	padding: 0 !important;
+	max-width: 100% !important;
+}
+.plan-features li br {
+  display: none;
+}

@@ -1,0 +1,82 @@
+.mbg-testimonial figure {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+  margin: 0;
+}
+.mbg-testimonial figure * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mbg-testimonial figure img {
+  max-width: 100%;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 50%;
+}
+.mbg-testimonial figure blockquote {
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 30px 50px 65px 50px;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 0 -40px;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.mbg-testimonial figure blockquote:before,
+.mbg-testimonial figure blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+.mbg-testimonial figure blockquote:before {
+  top: 35px;
+  left: 20px;
+}
+.mbg-testimonial figure blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 35px;
+}
+.mbg-testimonial figure .author {
+  margin: 0;
+  height: 80px;
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  padding: 0 35px;
+  position: relative;
+}
+.mbg-testimonial figure .author h5,
+.mbg-testimonial figure .author span {
+  left: 50%;
+  position: absolute;
+  opacity: 0.8;
+  padding: 3px 5px;
+}
+.mbg-testimonial figure .author h5 {
+  text-transform: uppercase;
+  bottom: 50%;
+  margin: 0;
+  color: #000000;
+}
+.mbg-testimonial figure .author span {
+  color: black;
+  top: 50%;
+}

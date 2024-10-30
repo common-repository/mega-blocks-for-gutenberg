@@ -1,0 +1,3022 @@
+.wcp-caption-plugin .image-caption-box {   
+    cursor: pointer;
+    position: relative;  
+    overflow: visible;
+    width: 100%;
+    /*border: 5px solid #eee;*/
+}
+
+.wcp-loader {
+    display: block;
+    background-image: url('../images/ajax-loader.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    z-index: 99999999999;
+}
+
+.centered-text {
+    display: table-cell !important;
+    vertical-align: middle !important;    
+}
+.wcp-caption-plugin .image-caption-box img {  
+    position: relative;
+    -webkit-transition: all 1s ease-out;  
+    -moz-transition: all 1s ease-out;  
+    -o-transition: all 1s ease-out;  
+    -ms-transition: all 1s ease-out;  
+    transition: all 1s ease-out;
+    max-width: 100% !important;
+    display: block;
+} 
+
+.wcp-caption-plugin .image-caption-box .caption {  
+    background-color: rgba(0,0,0,0.5);  
+    position: absolute;  
+    color: #fff;  
+    z-index: 5;  
+    -webkit-transition: all 1s ease-out;  
+    -moz-transition: all 1s ease-out;  
+    -o-transition: all 1s ease-out;  
+    -ms-transition: all 1s ease-out;  
+    transition: all 1s ease-out;  
+    height: 100%;
+    width: 100%;
+} 
+.wcp-caption-plugin .image-caption-box .captionna {  
+    pointer-events: none !important;
+} 
+
+.wcp-caption-plugin .image-caption-box .no-effect {  
+    display: block;  
+    top: 0;
+    visibility: hidden;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .no-effect {  
+    visibility: visible;   
+} 
+
+
+.wcp-caption-plugin .image-caption-box .simple-fade {  
+    display: block;  
+    /*top: 0;*/
+    opacity: 0 !important;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .simple-fade {  
+    opacity: 1 !important;
+} 
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .slide-top-to-bottom {  
+    display: block;  
+    bottom: -100%;   
+}
+
+.wcp-caption-plugin .image-caption-box:hover .slide-top-to-bottom {  
+    -moz-transform: translateY(-100%);  
+    -o-transform: translateY(-100%);  
+    -webkit-transform: translateY(-100%);  
+    transform: translateY(-100%);  
+} 
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .slide-bottom-to-top {  
+    display: block;
+    top: -100%;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .slide-bottom-to-top {  
+    -moz-transform: translateY(100%);  
+    -o-transform: translateY(100%);  
+    -webkit-transform: translateY(100%);  
+    transform: translateY(100%);  
+} 
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .caption-slide-up {  
+    display: block;
+    top: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .caption-slide-up {  
+    -moz-transform: translateY(-100%);  
+    -o-transform: translateY(-100%);  
+    -webkit-transform: translateY(-100%);  
+    transform: translateY(-100%);  
+} 
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .slide-left-to-right {  
+    display: block;
+    left: -100%;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .slide-left-to-right {  
+    -moz-transform: translateX(100%);  
+    -o-transform: translateX(100%);  
+    -webkit-transform: translateX(100%);  
+    transform: translateX(100%);  
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .slide-right-to-left {  
+    display: block;
+    right: -100%;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .slide-right-to-left {  
+    -moz-transform: translateX(-100%);  
+    -o-transform: translateX(-100%);  
+    -webkit-transform: translateX(-100%);  
+    transform: translateX(-100%);  
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-flip-up {  
+    display: block;
+    top: 0;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-flip-up ~ img {  
+    z-index: 101;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-flip-up ~ img {  
+    -moz-transform: translateY(-100%);  
+    -o-transform: translateY(-100%);  
+    -webkit-transform: translateY(-100%);  
+    transform: translateY(-100%);  
+}
+
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-flip-down {  
+    display: block;
+    top: 0;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-flip-down ~ img {  
+    z-index: 101;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-flip-down ~ img {  
+    -moz-transform: translateY(100%);  
+    -o-transform: translateY(100%);  
+    -webkit-transform: translateY(100%);  
+    transform: translateY(100%);  
+}
+
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-flip-right {  
+    display: block;
+    top: 0;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-flip-right ~ img {  
+    z-index: 101;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-flip-right ~ img {  
+    -moz-transform: translateX(100%);  
+    -o-transform: translateX(100%);  
+    -webkit-transform: translateX(100%);  
+    transform: translateX(100%);  
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-flip-left {  
+    display: block;
+    top: 0;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-flip-left ~ img {  
+    z-index: 101;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-flip-left ~ img {  
+    -moz-transform: translateX(-100%);  
+    -o-transform: translateX(-100%);  
+    -webkit-transform: translateX(-100%);  
+    transform: translateX(-100%);  
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+
+.wcp-caption-plugin .image-caption-box .rotate-image-down {  
+    display: block;
+    top: 0;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .rotate-image-down ~ img {  
+    z-index: 2;
+    transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotate-image-down ~ img {  
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-turn-around {  
+    display: block;
+    top: 0;
+    /*z-index: 22;*/
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.wcp-caption-plugin .image-caption-box .image-turn-around ~ img {  
+    /*z-index: 44;*/
+    backface-visibility:hidden;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-turn-around ~ img {  
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-turn-around {  
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;  
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-and-pan {  
+    display: block;
+    top: 0;
+    z-index: 3;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s 
+    -webkit-transform:scale(0.01);
+    -moz-transform:scale(0.01);
+    transform:scale(0.01); 
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-and-pan ~ img {  
+    z-index: 2;
+    backface-visibility:hidden;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s    
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-and-pan ~ img {  
+    -webkit-transform:scale(10);
+    -moz-transform:scale(10);
+    transform:scale(10);    
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-and-pan {  
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    transform:scale(1); 
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tilt-image {  
+    display: block;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: scale(0.01);
+}
+
+.wcp-caption-plugin .image-caption-box .tilt-image ~ img {  
+    z-index: 2;
+    backface-visibility:hidden;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;   
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tilt-image ~ img {  
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tilt-image {
+    transform: scale(1);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .morph {  
+    display: block;
+    z-index: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);  
+}
+
+.wcp-caption-plugin .image-caption-box .morph ~ img {  
+    z-index: 2;
+    backface-visibility:hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .morph ~ img {  
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .morph {
+    z-index: 3;
+    border-radius: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);    
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .move-image-right {  
+    display: block;
+    z-index: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -ms-transform: translateX(-100%); /* IE 9 */
+    -webkit-transform: translateX(-100%); /* Safari */
+    transform: translateX(-100%); 
+}
+
+.wcp-caption-plugin .image-caption-box .move-image-right ~ img {  
+    z-index: 2;
+    backface-visibility:hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-right ~ img {  
+    -ms-transform: translateX(100%); /* IE 9 */
+    -webkit-transform: translateX(100%); /* Safari */
+    transform: translateX(100%);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-right {
+    -ms-transform: translateX(0); /* IE 9 */
+    -webkit-transform: translateX(0); /* Safari */
+    transform: translateX(0);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .move-image-left {  
+    display: block;
+    z-index: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -ms-transform: translateX(100%); /* IE 9 */
+    -webkit-transform: translateX(100%); /* Safari */
+    transform: translateX(100%); 
+}
+
+.wcp-caption-plugin .image-caption-box .move-image-left ~ img {  
+    z-index: 2;
+    backface-visibility:hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-left ~ img {  
+    -ms-transform: translateX(-100%); /* IE 9 */
+    -webkit-transform: translateX(-100%); /* Safari */
+    transform: translateX(-100%);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-left {
+    -ms-transform: translateX(0); /* IE 9 */
+    -webkit-transform: translateX(0); /* Safari */
+    transform: translateX(0);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .move-image-top {  
+    display: block;
+    z-index: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -ms-transform: translateY(100%); /* IE 9 */
+    -webkit-transform: translateY(100%); /* Safari */
+    transform: translateY(100%); 
+}
+
+.wcp-caption-plugin .image-caption-box .move-image-top ~ img {  
+    z-index: 2;
+    backface-visibility:hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-top ~ img {  
+    -ms-transform: translateY(-100%); /* IE 9 */
+    -webkit-transform: translateY(-100%); /* Safari */
+    transform: translateY(-100%);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-top {
+    -ms-transform: translateY(0); /* IE 9 */
+    -webkit-transform: translateY(0); /* Safari */
+    transform: translateY(0);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .move-image-bottom {  
+    display: block;
+    z-index: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -ms-transform: translateY(-100%); /* IE 9 */
+    -webkit-transform: translateY(-100%); /* Safari */
+    transform: translateY(-100%); 
+}
+
+.wcp-caption-plugin .image-caption-box .move-image-bottom ~ img {  
+    z-index: 2;
+    backface-visibility:hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-bottom ~ img {  
+    -ms-transform: translateY(100%); /* IE 9 */
+    -webkit-transform: translateY(100%); /* Safari */
+    transform: translateY(100%);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .move-image-bottom {
+    -ms-transform: translateY(0); /* IE 9 */
+    -webkit-transform: translateY(0); /* Safari */
+    transform: translateY(0);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-squeez-right {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-squeez-right ~ img {  
+    transform-origin: right;
+    z-index: 2;
+    backface-visibility:hidden;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-squeez-right ~ img {  
+    transform-origin: right;
+    -ms-transform: scaleX(0); /* IE 9 */
+    -moz-transform: scaleX(0); /* IE 9 */
+    -webkit-transform: scaleX(0); /* Safari */
+    -o-transform: scaleX(0); /* Safari */
+    transform: scaleX(0);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-squeez-left {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-squeez-left ~ img {  
+    transform-origin: left;
+    z-index: 2;
+    backface-visibility:hidden;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-squeez-left ~ img {  
+    transform-origin: left;
+    -ms-transform: scaleX(0); /* IE 9 */
+    -moz-transform: scaleX(0); /* IE 9 */
+    -webkit-transform: scaleX(0); /* Safari */
+    -o-transform: scaleX(0); /* Safari */
+    transform: scaleX(0);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-squeez-top {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-squeez-top ~ img {  
+    transform-origin: top;
+    z-index: 2;
+    backface-visibility:hidden;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-squeez-top ~ img {  
+    transform-origin: top;
+    -ms-transform: scaleY(0); /* IE 9 */
+    -moz-transform: scaleY(0); /* IE 9 */
+    -webkit-transform: scaleY(0); /* Safari */
+    -o-transform: scaleY(0); /* Safari */
+    transform: scaleY(0);
+}
+
+/* ----------------------- Image Caption Hover Styles ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .image-squeez-bottom {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .image-squeez-bottom ~ img {  
+    transform-origin: bottom;
+    z-index: 2;
+    backface-visibility:hidden;  
+}
+
+.wcp-caption-plugin .image-caption-box:hover .image-squeez-bottom ~ img {  
+    transform-origin: bottom;
+    -ms-transform: scaleY(0); /* IE 9 */
+    -moz-transform: scaleY(0); /* IE 9 */
+    -webkit-transform: scaleY(0); /* Safari */
+    -o-transform: scaleY(0); /* Safari */
+    transform: scaleY(0);
+}
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .fall-down-caption {  
+    display: block;
+    z-index: 2;
+    backface-visibility:hidden;  
+    opacity: 1;
+    -webkit-transform-origin: 100% 200%;
+    -webkit-transform: scale(1, 1) rotate(0deg);
+    transform-origin: 100% 200%;
+    transform: scale(1, 1) rotate(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box .fall-down-caption ~ img {
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .fall-down-caption {  
+    opacity: 0;
+    -webkit-transform-origin: 200% 500%;
+    -webkit-transform: scale(0, 0) rotate(270deg);
+    transform-origin: 200% 500%;
+    transform: scale(0, 0) rotate(270deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .fall-down-image {  
+    display: block;
+    z-index: 0;
+    
+}
+
+.wcp-caption-plugin .image-caption-box .fall-down-image ~ img {
+    backface-visibility:hidden;  
+    opacity: 1;
+    -webkit-transform-origin: 100% 200%;
+    -webkit-transform: scale(1, 1) rotate(0deg);
+    transform-origin: 100% 200%;
+    transform: scale(1, 1) rotate(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .fall-down-image ~ img {  
+    opacity: 0;
+    -webkit-transform-origin: 200% 500%;
+    -webkit-transform: scale(0, 0) rotate(270deg);
+    transform-origin: 200% 500%;
+    transform: scale(0, 0) rotate(270deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .swap-caption {  
+    backface-visibility:hidden;  
+    opacity: 0;
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: scale(0, 0) translate(-700px, 0px);
+    transform-origin: 0 100%;
+    transform: scale(0, 0) translate(-700px, 0px);
+    
+}
+
+.wcp-caption-plugin .image-caption-box .swap-caption ~ img {
+    display: block;
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .swap-caption {  
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    -webkit-transform: scale(1, 1) translate(0px, 0px);
+    transform-origin: 100% 100%;
+    transform: scale(1, 1) translate(0px, 0px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .swap-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .swap-image ~ img {
+    backface-visibility:hidden;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: scale(0, 0) translate(-700px, 0px);
+    transform-origin: 0 100%;
+    transform: scale(0, 0) translate(-700px, 0px);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .swap-image ~ img {  
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    -webkit-transform: scale(1, 1) translate(0px, 0px);
+    transform-origin: 100% 100%;
+    transform: scale(1, 1) translate(0px, 0px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .puffin-caption {  
+    z-index: 2;
+    backface-visibility:hidden;
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(2,2);
+    transform-origin: 50% 50%;
+    transform: scale(2,2);
+    -webkit-filter: blur(2px);
+}
+
+.wcp-caption-plugin .image-caption-box .puffin-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .puffin-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1,1);
+    transform-origin: 50% 50%;
+    transform: scale(1,1);
+    -webkit-filter: blur(0px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .puffin-image {  
+    display: block;
+    z-index: 0;
+    opacity: 1 !important;
+}
+
+.wcp-caption-plugin .image-caption-box .puffin-image ~ img {
+    z-index: 2;
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(2,2);
+    transform-origin: 50% 50%;
+    transform: scale(2,2);
+    -webkit-filter: blur(2px);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .puffin-image ~ img {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1,1);
+    transform-origin: 50% 50%;
+    transform: scale(1,1);
+    -webkit-filter: blur(0px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .puffout-caption {  
+    z-index: 2;
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1,1);
+    transform-origin: 50% 50%;
+    transform: scale(1,1);
+    -webkit-filter: blur(0px);
+}
+
+.wcp-caption-plugin .image-caption-box .puffout-caption ~ img {
+    display: block;
+    z-index: 0;
+    opacity: 1 !important;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .puffout-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(2,2);
+    transform-origin: 50% 50%;
+    transform: scale(2,2);
+    -webkit-filter: blur(2px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .puffout-image {  
+    display: block;
+    z-index: 0;
+    opacity: 1 !important;
+}
+
+.wcp-caption-plugin .image-caption-box .puffout-image ~ img {
+    z-index: 2;
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1,1);
+    transform-origin: 50% 50%;
+    transform: scale(1,1);
+    -webkit-filter: blur(0px);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .puffout-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(2,2);
+    transform-origin: 50% 50%;
+    transform: scale(2,2);
+    -webkit-filter: blur(2px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoordown-caption {  
+    z-index: 2;
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: perspective(800px) rotateX(0deg);
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box .opendoordown-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoordown-caption {  
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: perspective(800px) rotateX(-180deg);
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(-180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoordown-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .opendoordown-image ~ img {
+    z-index: 2;
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: perspective(800px) rotateX(0deg);
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoordown-image ~ img {  
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: perspective(800px) rotateX(-180deg);
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(-180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoorup-caption {  
+    z-index: 2;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(0deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box .opendoorup-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoorup-caption {  
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(180deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoorup-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .opendoorup-image ~ img {
+    z-index: 2;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(0deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoorup-image ~ img {  
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(180deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoorright-caption {  
+    z-index: 2;
+    -webkit-transform-origin: 100% 0;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box .opendoorright-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoorright-caption {  
+    -webkit-transform-origin: 100% 0;
+    -webkit-transform: perspective(800px) rotateY(180deg);
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoorright-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .opendoorright-image ~ img {
+    z-index: 2;
+    -webkit-transform-origin: 100% 0;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoorright-image ~ img {  
+    -webkit-transform-origin: 100% 0;
+    -webkit-transform: perspective(800px) rotateY(180deg);
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoorleft-caption {  
+    z-index: 2;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box .opendoorleft-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoorleft-caption {  
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(-180deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(-180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .opendoorleft-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .opendoorleft-image ~ img {
+    z-index: 2;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .opendoorleft-image ~ img {  
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(-180deg);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(-180deg);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotatedown-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(0deg) translateZ(0px);  
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg) translateZ(0px);    
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .rotatedown-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotatedown-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transform: perspective(800px) rotateX(-180deg) translateZ(300px);
+    transform-origin: 50% 100%;
+    transform: perspective(800px) rotateX(-180deg) translateZ(300px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotatedown-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .rotatedown-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(0deg) translateZ(0px);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg) translateZ(0px);    
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotatedown-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transform: perspective(800px) rotateX(-180deg) translateZ(300px);
+    transform-origin: 50% 100%;
+    transform: perspective(800px) rotateX(-180deg) translateZ(300px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotateup-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(0deg) translateZ(0px);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg) translateZ(0px);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .rotateup-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotateup-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateX(180deg) translateZ(100px);
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateX(180deg) translateZ(100px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotateup-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .rotateup-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateX(0deg) translateZ(0px);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg) translateZ(0px);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotateup-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateX(180deg) translateZ(100px);
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateX(180deg) translateZ(100px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotateright-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg) translate3d(0px);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg) translate3d(0px);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .rotateright-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotateright-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateY(-180deg) translateZ(150px);
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateY(-180deg) translateZ(150px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotateright-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .rotateright-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg) translate3d(0px);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg) translate3d(0px);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotateright-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateY(-180deg) translateZ(150px);
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateY(-180deg) translateZ(150px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotateleft-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .rotateleft-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotateleft-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateY(180deg) translateZ(100px);
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateY(180deg) translateZ(100px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .rotateleft-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .rotateleft-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .rotateleft-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateY(180deg) translateZ(300px);
+    transform: perspective(800px) rotateY(180deg) translateZ(300px);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutup-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutup-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutup-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: scale(.2) translate(0%, -200%);
+    transform: scale(.2) translate(0%, -200%);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutup-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutup-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutup-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: scale(.2) translate(0%, -200%);
+    transform: scale(.2) translate(0%, -200%);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutdown-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutdown-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutdown-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scale(.2) translate(0%, 200%);
+    transform: scale(.2) translate(0%, 200%);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutdown-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutdown-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutdown-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scale(.2) translate(0%, 200%);
+    transform: scale(.2) translate(0%, 200%);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutright-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutright-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutright-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transform: scale(.2) translate(200%, 0%);
+    transform: scale(.2) translate(200%, 0%);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutright-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutright-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutright-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transform: scale(.2) translate(200%, 0%);
+    transform: scale(.2) translate(200%, 0%);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutleft-caption {  
+    opacity: 1 !important;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutleft-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutleft-caption {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transform: scale(.2) translate(-200%, 0%);
+    transform: scale(.2) translate(-200%, 0%);
+}
+
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .spaceoutleft-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .spaceoutleft-image ~ img {
+    opacity: 1 !important;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    z-index: 2;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .spaceoutleft-image ~ img {  
+    opacity: 0 !important;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transform: scale(.2) translate(-200%, 0%);
+    transform: scale(.2) translate(-200%, 0%);
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .foolish-caption {  
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: foolishIn;
+    animation-name: foolishIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box .foolish-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .foolish-caption {  
+    opacity: 0 !important;
+    -webkit-animation-name: foolishOut;
+    animation-name: foolishOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .foolish-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .foolish-image ~ img {
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: foolishIn;
+    animation-name: foolishIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .foolish-image ~ img {  
+    opacity: 0 !important;
+    -webkit-animation-name: foolishOut;
+    animation-name: foolishOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tinright-caption {  
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinRightIn;
+    animation-name: tinRightIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box .tinright-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tinright-caption {  
+    opacity: 0 !important;
+    -webkit-animation-name: tinRightOut;
+    animation-name: tinRightOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tinright-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .tinright-image ~ img {
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinRightIn;
+    animation-name: tinRightIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tinright-image ~ img {  
+    opacity: 0 !important;
+    -webkit-animation-name: tinRightOut;
+    animation-name: tinRightOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tinleft-caption {  
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinLeftIn;
+    animation-name: tinLeftIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box .tinleft-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tinleft-caption {  
+    opacity: 0 !important;
+    -webkit-animation-name: tinLeftOut;
+    animation-name: tinLeftOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tinleft-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .tinleft-image ~ img {
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinLeftIn;
+    animation-name: tinLeftIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tinleft-image ~ img {  
+    opacity: 0 !important;
+    -webkit-animation-name: tinLeftOut;
+    animation-name: tinLeftOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tinup-caption {  
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinUpIn;
+    animation-name: tinUpIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box .tinup-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tinup-caption {  
+    opacity: 0 !important;
+    -webkit-animation-name: tinUpOut;
+    animation-name: tinUpOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tinup-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .tinup-image ~ img {
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinUpIn;
+    animation-name: tinUpIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tinup-image ~ img {  
+    opacity: 0 !important;
+    -webkit-animation-name: tinUpOut;
+    animation-name: tinUpOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tindown-caption {  
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinDownIn;
+    animation-name: tinDownIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box .tindown-caption ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tindown-caption {  
+    opacity: 0 !important;
+    -webkit-animation-name: tinDownOut;
+    animation-name: tinDownOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .tindown-image {  
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .tindown-image ~ img {
+    opacity: 1 !important;
+    z-index: 2;
+    -webkit-animation-name: tinDownIn;
+    animation-name: tinDownIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .tindown-image ~ img { 
+    opacity: 0 !important;
+    -webkit-animation-name: tinDownOut;
+    animation-name: tinDownOut;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+
+
+
+/* ----------   Key Frames  ----------- */
+
+@-webkit-keyframes foolishOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1, 1) rotate(360deg);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  40% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform-origin: 0%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  80% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(0, 0) rotate(0deg);
+  }
+}
+@keyframes foolishOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1) rotate(360deg);
+  }
+
+  20% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  40% {
+    opacity: 1;
+    transform-origin: 100% 0%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform-origin: 0%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  80% {
+    opacity: 1;
+    transform-origin: 0% 100%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0) rotate(0deg);
+  }
+}
+@-webkit-keyframes foolishIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(0, 0) rotate(360deg);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  40% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform-origin: 0%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  80% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1, 1) rotate(0deg);
+  }
+}
+@keyframes foolishIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0) rotate(360deg);
+  }
+
+  20% {
+    opacity: 1;
+    transform-origin: 0% 100%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  40% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform-origin: 0%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  80% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scale(0.5, 0.5) rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1) rotate(0deg);
+  }
+}
+@-webkit-keyframes tinRightOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateX(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateX(900%);
+  }
+}
+@keyframes tinRightOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(900%);
+  }
+}
+@-webkit-keyframes tinLeftOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateX(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateX(-900%);
+  }
+}
+@keyframes tinLeftOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(-900%);
+  }
+}
+@-webkit-keyframes tinUpOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateY(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateY(-900%);
+  }
+}
+@keyframes tinUpOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1, 1) translateY(-900%);
+  }
+}
+@-webkit-keyframes tinDownOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateY(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateY(900%);
+  }
+}
+@keyframes tinDownOut {
+  0%, 20%, 40%, 50% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+
+  10%, 30% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1, 1) translateY(900%);
+  }
+}
+@-webkit-keyframes tinRightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateX(900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateX(0);
+  }
+}
+@keyframes tinRightIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+}
+@-webkit-keyframes tinLeftIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateX(-900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateX(0);
+  }
+}
+@keyframes tinLeftIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(-900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+}
+@-webkit-keyframes tinUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateY(-900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes tinUpIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateY(-900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes tinDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1, 1) translateY(900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes tinDownIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateY(900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateY(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-in {  
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-in ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-in {  
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+.wcp-caption-plugin .image-caption-box .static-caption-zoom {  
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+.wcp-caption-plugin .image-caption-box .static-caption-zoom ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .static-caption-zoom {  
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-out {  
+    -webkit-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+    opacity: 0
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-out ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-out {  
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-in-twist {
+    -webkit-transform: scale(0) rotateZ(-720deg);
+    transform: scale(0) rotateZ(-720deg);
+    opacity: 0    
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-in-twist ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-in-twist {  
+    -webkit-transform: scale(1) rotateZ(0);
+    -ms-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+    opacity: 1
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-out-twist {
+    -webkit-transform: scale(5) rotateZ(720deg);
+    transform: scale(5) rotateZ(720deg);
+    opacity: 0
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-out-twist ~ img {
+    display: block;
+    z-index: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-out-twist {  
+    -webkit-transform: scale(1) rotateZ(0);
+    -ms-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+    opacity: 1;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-caption-in-image-out {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-caption-in-image-out ~ img {
+    display: block;
+    z-index: 0;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);    
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-caption-in-image-out {  
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-caption-in-image-out ~ img {  
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-caption-out-image-in {
+    -webkit-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+    opacity: 0;
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-caption-out-image-in ~ img {
+    display: block;
+    z-index: 0;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);   
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-caption-out-image-in {  
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-caption-out-image-in ~ img {  
+    -webkit-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+    opacity: 0;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-image-out-caption-twist {
+    -webkit-transform: scale(0) rotateZ(-720deg);
+    transform: scale(0) rotateZ(-720deg);
+    opacity: 0;   
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-image-out-caption-twist ~ img {
+    display: block;
+    z-index: 0;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-image-out-caption-twist {  
+    -webkit-transform: scale(1) rotateZ(0);
+    -ms-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-image-out-caption-twist ~ img {  
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .zoom-image-in-caption-twist {
+    -webkit-transform: scale(5) rotateZ(720deg);
+    transform: scale(5) rotateZ(720deg);
+    opacity: 0
+}
+
+.wcp-caption-plugin .image-caption-box .zoom-image-in-caption-twist ~ img {
+    display: block;
+    z-index: 0;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);    
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-image-in-caption-twist {  
+    -webkit-transform: scale(1) rotateZ(0);
+    -ms-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .zoom-image-in-caption-twist ~ img {  
+    -webkit-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+    opacity: 0;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO New Effects ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .flip-image-vertical,
+.wcp-caption-plugin .image-caption-box .flip-image-vertical-back,
+.wcp-caption-plugin .image-caption-box .flip-image-horizontal,
+.wcp-caption-plugin .image-caption-box .flip-image-horizontal-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.wcp-caption-plugin .image-caption-box .flip-image-vertical ~ img,
+.wcp-caption-plugin .image-caption-box .flip-image-vertical-back ~ img,
+.wcp-caption-plugin .image-caption-box .flip-image-horizontal ~ img,
+.wcp-caption-plugin .image-caption-box .flip-image-horizontal-back ~ img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .flip-image-vertical {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-vertical {  
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-vertical ~ img {  
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .flip-image-vertical-back {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-vertical-back {  
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-vertical-back ~ img {  
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .flip-image-horizontal {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-horizontal {  
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-horizontal ~ img {  
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .flip-image-horizontal-back {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-horizontal-back {  
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .flip-image-horizontal-back ~ img {  
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-top {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-top {  
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-top ~ img {  
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-top ~ img {  
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+}
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-bottom {
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-bottom {  
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-bottom ~ img {  
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-bottom ~ img {  
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-left {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    opacity: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-left {  
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-left ~ img {  
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-left ~ img {  
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    opacity: 0;
+}
+
+/* ----------------------- Image Caption Hover Styles PRO ----------------------- */
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-right {
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    opacity: 0;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-right {  
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box .page-turn-from-right ~ img {  
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 1;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .page-turn-from-right ~ img {  
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    opacity: 0;
+}
+
+.no-hover-still-caption {
+    
+}
+
+.wcp-caption-plugin .image-caption-box .visible-caption-blur-image ~ img {  
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .visible-caption-blur-image ~ img {  
+    filter: blur(0);
+    -webkit-filter: blur(0);
+}
+
+.wcp-caption-plugin .image-caption-box .visible-caption-grayscale-image ~ img {  
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.wcp-caption-plugin .image-caption-box:hover .visible-caption-grayscale-image ~ img {  
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
+
+.square.overlay_visible.slide_up .wcp-ih-inner {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.square.overlay_visible.slide_up .wcp-ih-inner p {
+    opacity: 0;
+}
+.square.overlay_visible.slide_up .wcp-ih-inner:hover .img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    background: rgba(184, 7, 31, .8)
+}
+.square.overlay_visible.slide_up .wcp-ih-inner:hover p {
+    opacity: 1
+}
+.square.overlay_visible.slide_up .wcp-ih-inner:hover h3 {
+    padding: 10% 0 0 0;
+    -webkit-transition: all .5s ease-in-out .4s;
+    -moz-transition: all .5s ease-in-out .4s;
+    -o-transition: all .5s ease-in-out .4s;
+    -ms-transition: all .5s ease-in-out .4s;
+    transition: all .5s ease-in-out .4s
+}
+.scroll-image-bottom-caption .caption {
+    height: auto !important;
+    bottom: 0 !important;
+}
+.wcp-caption-plugin .image-caption-box.scroll-image-bottom-caption:hover {  
+    background-position: center 100% !important;
+}
+.scroll-image-top-caption .caption {
+    height: auto !important;
+    top: 0 !important;
+}
+.wcp-caption-plugin .image-caption-box.scroll-image-top-caption:hover {  
+    background-position: center 100% !important;
+}
+
+.wcp-caption-plugin .image-caption-box .visible-image-title-caption-switch {  
+    background-color: transparent;
+}
+.wcp-caption-plugin .image-caption-box .visible-image-title-caption-switch .desc {  
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.25s ease-out;  
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;  
+    -ms-transition: all 0.25s ease-out;  
+    transition: all 0.25s ease-out;
+}
+.wcp-caption-plugin .image-caption-box .visible-image-title-caption-switch .heading {  
+    max-height: 500px;
+    overflow: visible;
+    -webkit-transition: all 0.25s ease-out;  
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;  
+    -ms-transition: all 0.25s ease-out;  
+    transition: all 0.25s ease-out;
+}
+.wcp-caption-plugin .image-caption-box:hover .visible-image-title-caption-switch .desc {  
+    max-height: 500px !important;
+    overflow: visible;
+    -webkit-transition: all 0.25s ease-in;  
+    -moz-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;  
+    -ms-transition: all 0.25s ease-in;  
+    transition: all 0.25s ease-in;
+}
+.wcp-caption-plugin .image-caption-box:hover .visible-image-title-caption-switch .heading {  
+    max-height: 0 !important;
+    overflow: hidden; !important;
+    -webkit-transition: all 0.25s ease-in;  
+    -moz-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;  
+    -ms-transition: all 0.25s ease-in;  
+    transition: all 0.25s ease-in;
+}
+.wcp-caption-plugin .image-caption-box .black-dots-overlay {  
+    display: block;  
+    top: 0;
+    opacity: 0 !important;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+    background-image: url(pattern_dark.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+.wcp-caption-plugin .image-caption-box .black-dots-overlay .centered-text {  
+    vertical-align: bottom !important;
+}
+.wcp-caption-plugin .image-caption-box .black-dots-overlay .centered-text p {  
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 8px;
+    padding: 2px 6px;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .black-dots-overlay {  
+    opacity: 1 !important;
+}
+
+.wcp-caption-plugin .image-caption-box:hover .static-caption-under-image {
+    background-color: transparent;
+}
+
+/*Break into Pieces*/
+
+.wcp-caption-plugin .image-container.image-container-disintegrate {
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
+    -webkit-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    overflow: visible!important
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .image-overlay-container {
+    background: rgba(0, 0, 0, .75);
+    opacity: 0;
+    -webkit-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container [class^=image-clip-] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -500;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-ascend .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-collapse .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-drop .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-up .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-left .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-in .image-clip-1 {
+    -webkit-clip-path: inset(0 79% 0 0);
+    clip-path: inset(0 79% 0 0)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-ascend .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-collapse .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-drop .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-up .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-left .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-in .image-clip-2 {
+    -webkit-clip-path: inset(0 60% 0 20%);
+    clip-path: inset(0 60% 0 20%);
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-ascend .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-collapse .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-drop .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-up .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-left .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-in .image-clip-3 {
+    -webkit-clip-path: inset(0 40% 0 39%);
+    clip-path: inset(0 40% 0 39%);
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-ascend .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-collapse .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-drop .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-up .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-left .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-in .image-clip-4 {
+    -webkit-clip-path: inset(0 20% 0 59%);
+    clip-path: inset(0 20% 0 59%);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-ascend .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-collapse .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-drop .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-up .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-left .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-in .image-clip-5 {
+    -webkit-clip-path: inset(0 0 0 79%);
+    clip-path: inset(0 0 0 79%);
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-descend .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush-opposite .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-down .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-right .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-out .image-clip-1 {
+    -webkit-clip-path: inset(0 79% 0 0);
+    clip-path: inset(0 79% 0 0);
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-descend .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush-opposite .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-down .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-right .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-out .image-clip-2 {
+    -webkit-clip-path: inset(0 60% 0 20%);
+    clip-path: inset(0 60% 0 20%);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-descend .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush-opposite .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-down .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-right .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-out .image-clip-3 {
+    -webkit-clip-path: inset(0 40% 0 39%);
+    clip-path: inset(0 40% 0 39%);
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-descend .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush-opposite .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-down .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-right .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-out .image-clip-4 {
+    -webkit-clip-path: inset(0 20% 0 59%);
+    clip-path: inset(0 20% 0 59%);
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-descend .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-flush-opposite .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-fly-down .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-right .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-vertical-zoom-out .image-clip-5 {
+    -webkit-clip-path: inset(0 0 0 79%);
+    clip-path: inset(0 0 0 79%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-ascend .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-up .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-up .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-in .image-clip-1 {
+    -webkit-clip-path: inset(0 0 79% 0);
+    clip-path: inset(0 0 79% 0)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-ascend .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-up .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-up .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-in .image-clip-2 {
+    -webkit-clip-path: inset(20% 0 60% 0);
+    clip-path: inset(20% 0 60% 0);
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-ascend .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-up .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-up .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-in .image-clip-3 {
+    -webkit-clip-path: inset(39% 0 40% 0);
+    clip-path: inset(39% 0 40% 0);
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-ascend .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-up .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-up .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-in .image-clip-4 {
+    -webkit-clip-path: inset(59% 0 20% 0);
+    clip-path: inset(59% 0 20% 0);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-ascend .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-up .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-up .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-in .image-clip-5 {
+    -webkit-clip-path: inset(79% 0 0 0);
+    clip-path: inset(79% 0 0 0);
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-collapse .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-descend .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-down .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-drop .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush-opposite .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-down .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-out .image-clip-1 {
+    -webkit-clip-path: inset(0 0 79% 0);
+    clip-path: inset(0 0 79% 0);
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-collapse .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-descend .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-down .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-drop .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush-opposite .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-down .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-out .image-clip-2 {
+    -webkit-clip-path: inset(20% 0 60% 0);
+    clip-path: inset(20% 0 60% 0);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-collapse .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-descend .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-down .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-drop .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush-opposite .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-down .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-out .image-clip-3 {
+    -webkit-clip-path: inset(39% 0 40% 0);
+    clip-path: inset(39% 0 40% 0);
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-collapse .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-descend .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-down .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-drop .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush-opposite .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-down .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-out .image-clip-4 {
+    -webkit-clip-path: inset(59% 0 20% 0);
+    clip-path: inset(59% 0 20% 0);
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-collapse .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-descend .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-down .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-drop .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-flush-opposite .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-fly-down .image-clip-5,
+.wcp-caption-plugin .image-container.image-container-disintegrate .disintegrate-container.break-pieces-horizontal-zoom-out .image-clip-5 {
+    -webkit-clip-path: inset(79% 0 0 0);
+    clip-path: inset(79% 0 0 0)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .image-overlay-container {
+    opacity: 1
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-left [class^=image-clip] {
+    -webkit-transform: translateX(-10%);
+    -ms-transform: translateX(-10%);
+    transform: translateX(-10%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-right [class^=image-clip] {
+    -webkit-transform: translateX(10%);
+    -ms-transform: translateX(10%);
+    transform: translateX(10%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-fly-up [class^=image-clip] {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateX(150deg) rotateY(90deg) rotateZ(5deg);
+    transform: rotateX(150deg) rotateY(90deg) rotateZ(5deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-fly-down [class^=image-clip] {
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateX(-150deg) rotateY(-90deg) rotateZ(-5deg);
+    transform: rotateX(-150deg) rotateY(-90deg) rotateZ(-5deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-ascend [class^=image-clip],
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-ascend [class^=image-clip] {
+    -webkit-transform: rotateY(-10deg) translate(-15%, -15%);
+    transform: rotateY(-10deg) translate(-15%, -15%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-descend [class^=image-clip],
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-descend [class^=image-clip] {
+    -webkit-transform: rotateY(10deg) translate(15%, 15%);
+    transform: rotateY(10deg) translate(15%, 15%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-zoom-in [class^=image-clip],
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-zoom-in [class^=image-clip] {
+    -webkit-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-zoom-out [class^=image-clip],
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-zoom-out [class^=image-clip] {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-flush [class^=image-clip],
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-flush [class^=image-clip] {
+    -webkit-transform: scale(0) rotateZ(-360deg) rotateY(90deg) rotateX(90deg);
+    transform: scale(0) rotateZ(-360deg) rotateY(90deg) rotateX(90deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-flush-opposite [class^=image-clip],
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-flush-opposite [class^=image-clip] {
+    -webkit-transform: scale(0) rotateZ(360deg) rotateY(-90deg) rotateX(-90deg);
+    transform: scale(0) rotateZ(360deg) rotateY(-90deg) rotateX(-90deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-collapse [class^=image-clip]:nth-child(even),
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-collapse [class^=image-clip]:nth-child(even) {
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateX(90deg) rotateZ(5deg);
+    transform: rotateX(90deg) rotateZ(5deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-collapse [class^=image-clip]:nth-child(odd),
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-collapse [class^=image-clip]:nth-child(odd) {
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateX(90deg) rotateZ(-5deg);
+    transform: rotateX(90deg) rotateZ(-5deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-drop [class^=image-clip]:nth-child(even),
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-drop [class^=image-clip]:nth-child(even) {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateX(10deg) rotateY(15deg) rotateZ(-5deg) translateY(30%);
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(-5deg) translateY(30%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-drop [class^=image-clip]:nth-child(odd),
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-vertical-drop [class^=image-clip]:nth-child(odd) {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateX(10deg) rotateY(-15deg) rotateZ(5deg) translateY(30%);
+    transform: rotateX(10deg) rotateY(-15deg) rotateZ(5deg) translateY(30%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-up [class^=image-clip] {
+    -webkit-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-down [class^=image-clip] {
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    transform: translateY(10%)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-fly-up [class^=image-clip] {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateY(150deg) rotateX(120deg) rotateZ(5deg);
+    transform: rotateY(150deg) rotateX(120deg) rotateZ(5deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .break-pieces-horizontal-fly-down [class^=image-clip] {
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: rotateY(-150deg) rotateX(-120deg) rotateZ(-5deg);
+    transform: rotateY(-150deg) rotateX(-120deg) rotateZ(-5deg)
+}
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .image-clip-1,
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .image-clip-2,
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .image-clip-3,
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .image-clip-4,
+.wcp-caption-plugin .image-container.image-container-disintegrate:hover .image-clip-5 {
+    opacity: 0
+}
+.image-overlay-container.caption {
+    position: absolute;
+    top: 0;
+}

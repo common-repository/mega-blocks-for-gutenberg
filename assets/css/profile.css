@@ -1,0 +1,85 @@
+.mbg-profile-card {
+  text-align:left;
+  font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  color: #141414;
+  line-height: 1.4em;
+  font-size: 14px;
+  box-shadow: none !important;
+}
+
+.mbg-profile-card * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mbg-profile-card .profile-image img {
+  border-radius: 5px;
+  max-width: 100%;
+  height: 80px;
+  vertical-align: top;
+  float: left;
+}
+
+.mbg-profile-card figcaption {
+  width: 100%;
+  background-color: #333333;
+  color: #fff;
+  padding: 25px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.mbg-profile-card figcaption:after {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #333333 transparent transparent transparent;
+}
+
+.mbg-profile-card h3,
+.mbg-profile-card h4,
+.mbg-profile-card p {
+  margin: 0 0 5px;
+}
+
+.mbg-profile-card h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #8c8c8c;
+}
+
+.mbg-profile-card h4 {
+  color: #8c8c8c;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.mbg-profile-card p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.mbg-profile-card .icons {
+  padding: 20px 90px;
+}
+.mbg-profile-card i {
+  color:#666;
+  padding: 10px 6px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: normal;
+  opacity: 0.75;
+}
